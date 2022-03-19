@@ -18,7 +18,7 @@ public class ParagraphVerificationTest {
 
     @Test
     public void skillsVerificationInParagraph() {
-        LOGGER.info("Test verifies that paragraph under <Additional skills and qualification> : contains exactly 5 skills");
+        LOGGER.info("Test verifies that items in a list under paragraph <Additional skills and qualification required for the higher position>: contains exactly 5 skills");
 
         baseFunctions = new BaseFunctions();
         baseFunctions.openPage("https://ctco.lv/en");
