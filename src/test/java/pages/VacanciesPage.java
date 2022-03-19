@@ -11,6 +11,8 @@ import java.util.List;
 public class VacanciesPage {
     private final By TEST_AUTOMATION_ENGINEER_SECTION = By.xpath(".//li[@id ='menu-item-4629']");
     private final By TEST_AUTOMATION_ENGINEER_TEXT_BLOCK = By.xpath(".//div[contains(@class, 'animated fadeIn active')]/div[@class = 'text-block']");
+//    private final By TEST_AUTOMATION_ENGINEER_TEXT_BLOCK = By.xpath(".//div[@data-href= 'https://ctco.lv/careers/vacancies/data-engineer/']/div[@class = 'text-block']");
+
 
     private final Logger LOGGER = LogManager.getLogger(this.getClass());
 
@@ -27,12 +29,13 @@ public class VacanciesPage {
     }
 
     public List<WebElement> getListsOfSkills() {
-        LOGGER.info("Getting skills from paragraph" );
+        LOGGER.info("Getting skills from paragraph");
         WebElement blockElement = baseFunctions.findElement(TEST_AUTOMATION_ENGINEER_TEXT_BLOCK);
-        WebElement element = blockElement.findElements(By.tagName("ul")).get(1);
-        return element.findElements(By.tagName("li"));
+        WebElement ulElement = blockElement.findElements(By.tagName("ul")).get(1);
+        return ulElement.findElements(By.tagName("li"));
 
     }
+
 
 }
 
