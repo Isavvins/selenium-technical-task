@@ -1,5 +1,7 @@
 package tests;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -11,10 +13,13 @@ import pages.VacanciesPage;
 import java.util.List;
 
 public class ParagraphVerificationTest {
+    private final Logger LOGGER = LogManager.getLogger(this.getClass());
     private BaseFunctions baseFunctions;
 
     @Test
     public void skillsVerificationInParagraph() {
+        LOGGER.info("Test verifies that paragraph under <Additional skills and qualification> : contains exactly 5 skills");
+
         baseFunctions = new BaseFunctions();
         baseFunctions.openPage("https://ctco.lv/en");
 
