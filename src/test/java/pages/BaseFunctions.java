@@ -55,9 +55,7 @@ public class BaseFunctions {
         LOGGER.info("Closing browser window");
         if (driver != null) {
             driver.close();
-
         }
-
     }
 }
 

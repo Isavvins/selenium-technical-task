@@ -25,7 +25,6 @@ public class ParagraphVerificationTest {
 
         HomePage homePage = new HomePage(baseFunctions);
         homePage.acceptCookies();
-
         homePage.mouseOverAndClick();
 
         VacanciesPage vacanciesPage = new VacanciesPage(baseFunctions);

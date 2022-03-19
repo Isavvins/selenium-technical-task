@@ -30,9 +30,6 @@ public class VacanciesPage {
         WebElement blockElement = baseFunctions.findElement(TEST_AUTOMATION_ENGINEER_TEXT_BLOCK);
         WebElement ulElement = blockElement.findElements(By.tagName("ul")).get(1);
         return ulElement.findElements(By.tagName("li"));
-
     }
-
-
 }
 
