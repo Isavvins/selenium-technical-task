@@ -1,10 +1,8 @@
 package pages;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+
 
 import java.util.List;
 
@@ -27,10 +25,6 @@ public class VacanciesPage {
         WebElement blockElement = baseFunctions.findElement(TEST_AUTOMATION_ENGINEER_TEXT_BLOCK);
         WebElement element = blockElement.findElements(By.tagName("ul")).get(1);
         return element.findElements(By.tagName("li"));
-
-
-
-
 
     }
 

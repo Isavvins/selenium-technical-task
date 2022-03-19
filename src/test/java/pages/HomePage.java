@@ -12,12 +12,10 @@ public class HomePage {
 
     public HomePage(BaseFunctions baseFunctions) {
         this.baseFunctions = baseFunctions;
-
     }
 
     public void acceptCookies() {
         baseFunctions.click(ACCEPT_COOKIE_BTN);
-
     }
 
     public void mouseOverAndClick() {

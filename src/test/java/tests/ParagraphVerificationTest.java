@@ -27,14 +27,11 @@ public class ParagraphVerificationTest {
         vacanciesPage.clickOnVacancy();
 
         List<WebElement> skills = vacanciesPage.getListsOfSkills();
-
         Assertions.assertEquals(5, skills.size(), "Paragraph contains incorrect skills count");
-
     }
 
     @AfterEach
     public void CloseBrowser() {
         baseFunctions.closeBrowse();
-
     }
 }
