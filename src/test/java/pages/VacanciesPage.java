@@ -23,11 +23,11 @@ public class VacanciesPage {
         baseFunctions.click(TEST_AUTOMATION_ENGINEER_SECTION);
     }
 
-    public void getListsOfSkills() {
+    public List<WebElement> getListsOfSkills() {
         WebElement blockElement = baseFunctions.findElement(TEST_AUTOMATION_ENGINEER_TEXT_BLOCK);
-        WebElement element = blockElement.findElements(By.tagName("ul")).get(2);
-        List<WebElement> listsOfSkills = element.findElements(By.tagName("li"));
-        System.out.println(listsOfSkills.size());
+        WebElement element = blockElement.findElements(By.tagName("ul")).get(1);
+        return element.findElements(By.tagName("li"));
+
 
 
 

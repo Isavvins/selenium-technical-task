@@ -9,7 +9,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.List;
 
 public class BaseFunctions {
     WebDriver driver;
@@ -36,24 +35,12 @@ public class BaseFunctions {
         wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
     }
 
-    public void click(WebElement element) {
-        wait.until(ExpectedConditions.elementToBeClickable(element)).click();
-    }
-
     public void mouseOverEvent(WebElement element) {
         builder.moveToElement(element).build().perform();
     }
 
     public WebElement findElement(By locator) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-    }
-
-    public List<WebElement> findElements(By locator) {
-        return driver.findElements(locator);
-    }
-
-    public List<WebElement> findElements(WebElement parentElement, By childLocator) {
-        return parentElement.findElements(childLocator);
     }
 
     public void closeBrowse() {

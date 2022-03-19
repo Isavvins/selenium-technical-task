@@ -21,9 +21,9 @@ public class HomePage {
     }
 
     public void mouseOverAndClick() {
-      WebElement element = baseFunctions.findElement(CAREERS_NAVBAR_SECTION);
-      baseFunctions.mouseOverEvent(element);
-      baseFunctions.click(VACANCIES_MENU_ITEM);
+        WebElement element = baseFunctions.findElement(CAREERS_NAVBAR_SECTION);
+        baseFunctions.mouseOverEvent(element);
+        baseFunctions.click(VACANCIES_MENU_ITEM);
     }
 }
 
