@@ -1,5 +1,6 @@
 package tests;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import pages.BaseFunctions;
 import pages.HomePage;
@@ -22,6 +23,8 @@ public class ParagraphVerificationTest {
         vacanciesPage.clickOnVacancy();
 
         vacanciesPage.getListsOfSkills();
+
+
 
 
 

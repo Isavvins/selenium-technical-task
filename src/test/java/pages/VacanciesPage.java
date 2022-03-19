@@ -1,5 +1,6 @@
 package pages;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -24,8 +25,10 @@ public class VacanciesPage {
 
     public void getListsOfSkills() {
         WebElement blockElement = baseFunctions.findElement(TEST_AUTOMATION_ENGINEER_TEXT_BLOCK);
-        WebElement listsOfSkills = blockElement.findElements(By.tagName("ul")).get(1);
-        System.out.println(listsOfSkills.getSize());
+        WebElement element = blockElement.findElements(By.tagName("ul")).get(2);
+        List<WebElement> listsOfSkills = element.findElements(By.tagName("li"));
+        System.out.println(listsOfSkills.size());
+
 
 
 
