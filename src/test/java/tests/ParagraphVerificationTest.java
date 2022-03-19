@@ -39,3 +39,4 @@ public class ParagraphVerificationTest {
         baseFunctions.closeBrowse();
     }
 }
+
