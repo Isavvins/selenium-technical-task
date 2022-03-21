@@ -3,14 +3,11 @@ package tests;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebElement;
 import pages.BaseFunctions;
 import pages.HomePage;
 import pages.VacanciesPage;
 
-import java.util.List;
 
 public class ParagraphVerificationTest {
     private final Logger LOGGER = LogManager.getLogger(this.getClass());
@@ -30,8 +27,7 @@ public class ParagraphVerificationTest {
         VacanciesPage vacanciesPage = new VacanciesPage(baseFunctions);
         vacanciesPage.clickOnVacancy();
 
-        List<WebElement> skills = vacanciesPage.getListsOfSkills();
-        Assertions.assertEquals(5, skills.size(), "Paragraph contains incorrect skills count");
+        vacanciesPage.getListsOfSkills();
     }
 
     @AfterEach
