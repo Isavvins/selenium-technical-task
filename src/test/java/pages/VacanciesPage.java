@@ -11,7 +11,7 @@ import java.util.List;
 
 public class VacanciesPage {
     private final By TEST_AUTOMATION_ENGINEER_SECTION = By.xpath(".//li[@id ='menu-item-4629']");
-    private final By TEST_AUTOMATION_ENGINEER_TEXT_BLOCK = By.xpath(".//div[contains(@class, 'animated fadeIn active')]/div[@class = 'text-block']");
+    private final By TEST_AUTOMATION_ENGINEER_BLOCK = By.xpath(".//div[contains(@class, 'animated fadeIn active')]/div[@class = 'text-block']");
 
     private final Logger LOGGER = LogManager.getLogger(this.getClass());
     private BaseFunctions baseFunctions;
@@ -26,7 +26,7 @@ public class VacanciesPage {
 
     public void getListsOfSkills() {
         LOGGER.info("Getting all skills: ");
-        WebElement blockElement = baseFunctions.findElement(TEST_AUTOMATION_ENGINEER_TEXT_BLOCK);
+        WebElement blockElement = baseFunctions.findElement(TEST_AUTOMATION_ENGINEER_BLOCK);
         WebElement ulElement = blockElement.findElements(By.tagName("ul")).get(1);
         List<WebElement> liElements = ulElement.findElements(By.tagName("li"));
 
